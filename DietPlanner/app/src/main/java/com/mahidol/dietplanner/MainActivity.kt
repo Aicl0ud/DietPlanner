@@ -9,19 +9,19 @@ import android.util.Log
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
 import com.google.firebase.auth.FirebaseAuth
+
 import kotlinx.android.synthetic.main.activity_main.*
-import org.w3c.dom.Text
 
 
 class MainActivity : AppCompatActivity() {
     var mAuth: FirebaseAuth? = null
     private val TAG: String = "Main Activity"
+
     private val introSliderAdapter = IntroSliderAdapter(
         listOf(
             IntroSlide(
@@ -60,21 +60,21 @@ class MainActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance()
 
-        if (mAuth!!.currentUser != null && !mAuth!!.currentUser!!.isAnonymous){
-            startActivity(Intent(this@MainActivity, ResultActivity::class.java))
-            finish()
-        }
+//        if (mAuth!!.currentUser != null && !mAuth!!.currentUser!!.isAnonymous){
+//            startActivity(Intent(this@MainActivity, ResultActivity::class.java))
+//            finish()
+//        }
 
         main_btn_login.setOnClickListener{
             startActivity(Intent(this@MainActivity, AuthActivity::class.java))
         }
 
-        main_btn_skip.setOnClickListener{
+        main_btn_regis.setOnClickListener{
             mAuth!!.signInAnonymously()
                 .addOnCompleteListener(this){ task ->
                 if(task.isSuccessful){
                     Log.d(TAG, "signInAnonymously:success")
-                    startActivity(Intent(this@MainActivity, ResultActivity::class.java))
+                    startActivity(Intent(this@MainActivity, RegisterActivity::class.java))
                     finish()
                 } else {
                     Toast.makeText(this@MainActivity, "Authentication failed.", Toast.LENGTH_SHORT).show()

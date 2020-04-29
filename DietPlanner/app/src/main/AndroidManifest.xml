@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DataActivity"></activity>
+        <activity android:name=".ExerciseList"></activity>
+        <activity android:name=".FoodList" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".DataActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".AuthActivity" />

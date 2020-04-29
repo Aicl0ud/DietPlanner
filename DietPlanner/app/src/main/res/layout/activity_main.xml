@@ -11,18 +11,18 @@
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:background="@drawable/default_btn"
-        android:text="Login/Register"
-        app:layout_constraintBottom_toTopOf="@+id/main_btn_skip"
+        android:text="Login"
+        app:layout_constraintBottom_toTopOf="@+id/main_btn_regis"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/main_btn_skip"
+        android:id="@+id/main_btn_regis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:background="@android:color/transparent"
-        android:text="skip"
+        android:text="Register"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

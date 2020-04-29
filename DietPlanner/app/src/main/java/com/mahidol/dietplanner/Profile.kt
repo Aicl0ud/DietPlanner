@@ -6,10 +6,10 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_data.*
+import kotlinx.android.synthetic.main.activity_profile.*
 
 
-class DataActivity : AppCompatActivity() {
+class Profile : AppCompatActivity() {
 
     var db: FirebaseFirestore = FirebaseFirestore.getInstance() //call firebase
     var mAuth: FirebaseAuth? = FirebaseAuth.getInstance()
@@ -18,7 +18,7 @@ class DataActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_data)
+        setContentView(R.layout.activity_profile)
 
 //        mAuthListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
 //            val users = firebaseAuth.currentUser
@@ -28,24 +28,22 @@ class DataActivity : AppCompatActivity() {
 //            }
 //        }
 
-        confirm_btn_dataNext.setOnClickListener{
-            val gender = data_form_gender.text.toString().trim{it<=' '}
-            val age = data_form_age.text.toString().trim{it<=' '}
-            val height = data_form_height.text.toString().trim{it<=' '}
-            val weight = data_form_weight.text.toString().trim{it<=' '}
+        confirm_btn_data.setOnClickListener{
+            val username = data_form_username.text.toString().trim{it<=' '}
+            val target_weight = data_form_target.text.toString().trim{it<=' '}
+            val duration = data_form_duration.text.toString().trim{it<=' '}
             val user = hashMapOf(
-                "gender" to gender,
-                "age" to age,
-                "height" to height,
-                "weight" to weight
+                "username" to username,
+                "target weight" to target_weight,
+                "duration" to duration
             )
             val userID = mAuth!!.currentUser?.uid
 
             db.collection("users").document(userID.toString())
-                .set(user as Map<String, Any>)
+                .update(user as Map<String, Any>)
                 .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
                 .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
-            startActivity(Intent(this@DataActivity, Profile::class.java))
+            startActivity(Intent(this@Profile, ResultActivity::class.java))
             finish()
         }
     }

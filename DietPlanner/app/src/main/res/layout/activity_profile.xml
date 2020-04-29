@@ -8,19 +8,20 @@
     tools:context=".DataActivity">
 
     <TextView
-        android:id="@+id/information"
+        android:id="@+id/Profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="36dp"
-        android:layout_marginBottom="42dp"
-        android:text="Information"
+        android:layout_marginBottom="24dp"
+        android:text="Profile"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/bg_data"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageProfile"
+        app:layout_constraintStart_toStartOf="@+id/bg_data"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/bg_data"
@@ -30,129 +31,121 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/information"
+        app:layout_constraintTop_toBottomOf="@+id/Profile"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/page_bg" />
 
     <TextView
-        android:id="@+id/text_data_gender"
+        android:id="@+id/text_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
-        android:text="Gender"
+        android:text="Username"
         android:textColor="#393939"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/data_form_gender"
-        app:layout_constraintTop_toTopOf="@+id/bg_data" />
+        app:layout_constraintBottom_toTopOf="@+id/data_form_username"
+        app:layout_constraintStart_toStartOf="@+id/data_form_username"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
 
     <EditText
-        android:id="@+id/data_form_gender"
+        android:id="@+id/data_form_username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="26dp"
         android:ems="10"
-        android:hint="Enter gender"
+        android:hint="Enter your username"
         android:inputType="textPersonName"
         android:textAlignment="viewStart"
         android:textColor="#393939"
+        app:layout_constraintBottom_toTopOf="@+id/text_data_target"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_data_gender" />
+        app:layout_constraintTop_toBottomOf="@+id/text_username" />
 
     <TextView
-        android:id="@+id/text_data_age"
+        android:id="@+id/text_data_target"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Age"
+        android:text="Goal weight"
         android:textColor="#393939"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/data_form_age"
-        app:layout_constraintTop_toBottomOf="@+id/data_form_gender" />
+        app:layout_constraintBottom_toTopOf="@+id/data_form_target"
+        app:layout_constraintStart_toStartOf="@+id/data_form_target"
+        app:layout_constraintTop_toBottomOf="@+id/data_form_username" />
 
     <EditText
-        android:id="@+id/data_form_age"
+        android:id="@+id/data_form_target"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="31dp"
         android:ems="10"
-        android:hint="Enter age"
+        android:hint="Enter goal weight"
         android:inputType="textPersonName"
         android:textAlignment="viewStart"
         android:textColor="#393939"
+        app:layout_constraintBottom_toTopOf="@+id/text_data_duration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_data_age" />
+        app:layout_constraintTop_toBottomOf="@+id/text_data_target" />
 
     <TextView
-        android:id="@+id/text_data_height"
+        android:id="@+id/text_data_duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Height"
+        android:text="Duration"
         android:textColor="#393939"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/data_form_height"
-        app:layout_constraintTop_toBottomOf="@+id/data_form_age" />
+        app:layout_constraintBottom_toTopOf="@+id/data_form_duration"
+        app:layout_constraintStart_toStartOf="@+id/data_form_duration"
+        app:layout_constraintTop_toBottomOf="@+id/data_form_target" />
 
     <EditText
-        android:id="@+id/data_form_height"
+        android:id="@+id/data_form_duration"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="33dp"
         android:ems="10"
-        android:hint="Enter height"
+        android:hint="Should be more than 30 days"
         android:inputType="textPersonName"
         android:textAlignment="viewStart"
         android:textColor="#393939"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_btn_data"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_data_height" />
+        app:layout_constraintTop_toBottomOf="@+id/text_data_duration" />
 
-    <TextView
-        android:id="@+id/text_data_weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Weight"
-        android:textColor="#393939"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/data_form_weight"
-        app:layout_constraintTop_toBottomOf="@+id/data_form_height" />
-
-    <EditText
-        android:id="@+id/data_form_weight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:ems="10"
-        android:hint="Enter weight"
-        android:inputType="textPersonName"
-        android:textAlignment="viewStart"
-        android:textColor="#393939"
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="171dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_data_weight" />
+        app:layout_constraintTop_toBottomOf="@+id/Profile"
+        app:srcCompat="@drawable/profile" />
 
     <Button
-        android:id="@+id/confirm_btn_dataNext"
+        android:id="@+id/confirm_btn_data"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="28dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="63dp"
         android:background="@drawable/solid_btn"
-        android:text="Next"
+        android:text="Confirm"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/data_form_weight" />
+        app:layout_constraintTop_toBottomOf="@+id/data_form_duration" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
