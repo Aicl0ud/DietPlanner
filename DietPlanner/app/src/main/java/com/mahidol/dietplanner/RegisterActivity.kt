@@ -15,16 +15,17 @@ class RegisterActivity : AppCompatActivity() {
     var mAuth: FirebaseAuth? = null
     private val TAG: String = "Register Activity"
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
         mAuth = FirebaseAuth.getInstance()
 
-        if (mAuth!!.currentUser != null && !mAuth!!.currentUser!!.isAnonymous){
-            startActivity(Intent(this@RegisterActivity, ResultActivity::class.java))
-            finish()
-        }
+//        if (mAuth!!.currentUser != null && !mAuth!!.currentUser!!.isAnonymous){
+//            startActivity(Intent(this@RegisterActivity, ResultActivity::class.java))
+//            finish()
+//        }
 
         register_btn_register.setOnClickListener{
             val email = register_form_email.text.toString().trim{it<=' '}

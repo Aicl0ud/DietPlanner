@@ -19,15 +19,8 @@ class DataActivity : AppCompatActivity() {
     var db: FirebaseFirestore = FirebaseFirestore.getInstance()
     var mAuth: FirebaseAuth? = FirebaseAuth.getInstance()
     var mAuthListener: FirebaseAuth.AuthStateListener? = null
-    var btbirth: Button? = null
-    val c = Calendar.getInstance()
-    val year = c.get(Calendar.YEAR)
-    val month = c.get(Calendar.MONTH)
-    val day = c.get(Calendar.DAY_OF_MONTH)
     private val TAG: String = "Data Activity"
-    var simpledateformat: SimpleDateFormat = SimpleDateFormat("dd/mm/yyyy")
-    //Today's date
-    var date = simpledateformat.format(Calendar.getInstance().time)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,11 +34,8 @@ class DataActivity : AppCompatActivity() {
             }
         }
 
-        btbirth?.setOnClickListener{{
-            var datePickerDialog: Date
-        }}
 
-        confirm_btn_data.setOnClickListener{
+        confirm_btn_dataNext.setOnClickListener{
             var gender = "NONE"
             if(male.isChecked){
                 gender = male.text.toString()
@@ -72,7 +62,7 @@ class DataActivity : AppCompatActivity() {
                 .set(user as Map<String, Any>)
                 .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
                 .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
-            startActivity(Intent(this@DataActivity, ResultActivity::class.java))
+            startActivity(Intent(this@DataActivity, Profile::class.java))
             finish()
         }
     }
