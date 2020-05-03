@@ -4,10 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_auth.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class AuthActivity : AppCompatActivity() {
 
@@ -19,7 +17,8 @@ class AuthActivity : AppCompatActivity() {
         setContentView(R.layout.activity_auth)
 
         //Check login
-        if (mAuth!!.currentUser != null && !mAuth!!.currentUser!!.isAnonymous){
+//        if (mAuth!!.currentUser != null && !mAuth!!.currentUser!!.isAnonymous){
+        if(mAuth!!.currentUser != null){
             startActivity(Intent(this@AuthActivity, ResultActivity::class.java))
             finish()
         }
@@ -53,9 +52,9 @@ class AuthActivity : AppCompatActivity() {
             }
         }
 
-        auth_imgview_close.setOnClickListener { finish() }
-        auth_btn_register.setOnClickListener{
-            startActivity(Intent(this@AuthActivity, RegisterActivity::class.java))
+//        auth_imgview_close.setOnClickListener { finish() }
+        auth_imgview_close.setOnClickListener{
+            startActivity(Intent(this@AuthActivity, MainActivity::class.java))
             finish()
         }
     }

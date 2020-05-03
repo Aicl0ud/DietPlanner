@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    tools:context=".DataActivity">
+
+
+    <TextView
+        android:id="@+id/Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="197dp"
+        android:text="Profile"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_choose_image"
+        app:layout_constraintStart_toStartOf="@+id/bg_data"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bg_data"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profile"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/page_bg" />
+
+    <TextView
+        android:id="@+id/text_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textColor="#393939"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/data_form_username"
+        app:layout_constraintStart_toStartOf="@+id/data_form_username"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
+
+    <EditText
+        android:id="@+id/data_form_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="340dp"
+        android:ems="10"
+        android:hint="Enter your username"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textColor="#393939"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_upload_image" />
+
+    <TextView
+        android:id="@+id/text_data_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goal weight"
+        android:textColor="#393939"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/data_form_target"
+        app:layout_constraintStart_toStartOf="@+id/data_form_target"
+        app:layout_constraintTop_toBottomOf="@+id/data_form_username" />
+
+    <EditText
+        android:id="@+id/data_form_target"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="31dp"
+        android:ems="10"
+        android:hint="Enter goal weight"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textColor="#393939"
+        app:layout_constraintBottom_toTopOf="@+id/text_data_duration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_data_target" />
+
+    <TextView
+        android:id="@+id/text_data_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration"
+        android:textColor="#393939"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/data_form_duration"
+        app:layout_constraintStart_toStartOf="@+id/data_form_duration"
+        app:layout_constraintTop_toBottomOf="@+id/data_form_target" />
+
+    <EditText
+        android:id="@+id/data_form_duration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:hint="Should be more than 30 days"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
+        android:textColor="#393939"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_btn_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_data_duration" />
+
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="171dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profile"
+        app:srcCompat="@drawable/profile" />
+
+    <Button
+        android:id="@+id/confirm_btn_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="63dp"
+        android:background="@drawable/solid_btn"
+        android:text="Confirm"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data_form_duration" />
+
+
+    <Button
+
+        android:id="@+id/btn_choose_image"
+
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+
+        android:layout_marginStart="75dp"
+
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="409dp"
+        android:text="Choose image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_upload_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profile" />
+
+    <Button
+
+        android:id="@+id/btn_upload_image"
+
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+
+        android:layout_marginTop="277dp"
+
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="29dp"
+        android:text="Upload image"
+        app:layout_constraintBottom_toTopOf="@+id/data_form_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_choose_image"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

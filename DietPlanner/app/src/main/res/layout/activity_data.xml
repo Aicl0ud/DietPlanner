@@ -13,145 +13,164 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="36dp"
-        android:layout_marginBottom="42dp"
         android:text="Information"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/bg_data"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/bg_data"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="605dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_data_weight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/information"
+        app:layout_constraintTop_toTopOf="@+id/text_data_weight"
         app:srcCompat="@drawable/page_bg" />
+
 
     <TextView
         android:id="@+id/text_data_gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="195dp"
         android:text="Gender"
         android:textColor="#393939"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/data_form_gender"
-        app:layout_constraintTop_toTopOf="@+id/bg_data" />
-
-    <EditText
-        android:id="@+id/data_form_gender"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:ems="10"
-        android:hint="Enter gender"
-        android:inputType="textPersonName"
-        android:textAlignment="viewStart"
-        android:textColor="#393939"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_data_gender" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_data_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="20dp"
         android:text="Age"
         android:textColor="#393939"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/data_form_age"
-        app:layout_constraintTop_toBottomOf="@+id/data_form_gender" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_data_gender" />
 
     <EditText
         android:id="@+id/data_form_age"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="353dp"
+        android:layout_height="41dp"
         android:ems="10"
         android:hint="Enter age"
         android:inputType="textPersonName"
         android:textAlignment="viewStart"
         android:textColor="#393939"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/data_form_height"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_data_age"
         app:layout_constraintTop_toBottomOf="@+id/text_data_age" />
 
     <TextView
         android:id="@+id/text_data_height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="20dp"
         android:text="Height"
         android:textColor="#393939"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/data_form_height"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/data_form_age" />
 
     <EditText
         android:id="@+id/data_form_height"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="353dp"
+        android:layout_height="56dp"
         android:ems="10"
         android:hint="Enter height"
         android:inputType="textPersonName"
         android:textAlignment="viewStart"
         android:textColor="#393939"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/data_form_weight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/data_form_weight"
         app:layout_constraintTop_toBottomOf="@+id/text_data_height" />
 
     <TextView
         android:id="@+id/text_data_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="24dp"
         android:text="Weight"
         android:textColor="#393939"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/data_form_weight"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/data_form_height" />
 
     <EditText
         android:id="@+id/data_form_weight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="352dp"
+        android:layout_height="47dp"
         android:ems="10"
         android:hint="Enter weight"
         android:inputType="textPersonName"
         android:textAlignment="viewStart"
         android:textColor="#393939"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/confirm_btn_dataNext"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/confirm_btn_dataNext"
         app:layout_constraintTop_toBottomOf="@+id/text_data_weight" />
 
     <Button
-        android:id="@+id/confirm_btn_data"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="40dp"
+        android:id="@+id/confirm_btn_dataNext"
+        android:layout_width="354dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/solid_btn"
-        android:text="Confirm"
+        android:text="Next"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/data_form_weight" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/text_data_gender"
+        app:layout_constraintStart_toEndOf="@+id/text_data_gender">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_male"
+            android:button="@android:color/transparent"
+            android:text="male"
+            android:textAlignment="center"
+            android:textColor="@drawable/txt_selector"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_female"
+            android:button="@android:color/transparent"
+            android:text="female"
+            android:textAlignment="center"
+            android:textColor="@drawable/txt_selector"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="233dp" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
