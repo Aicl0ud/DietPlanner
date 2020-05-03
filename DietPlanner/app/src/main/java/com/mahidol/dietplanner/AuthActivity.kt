@@ -17,7 +17,8 @@ class AuthActivity : AppCompatActivity() {
         setContentView(R.layout.activity_auth)
 
         //Check login
-        if (mAuth!!.currentUser != null && !mAuth!!.currentUser!!.isAnonymous){
+//        if (mAuth!!.currentUser != null && !mAuth!!.currentUser!!.isAnonymous){
+        if(mAuth!!.currentUser != null){
             startActivity(Intent(this@AuthActivity, ResultActivity::class.java))
             finish()
         }

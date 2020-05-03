@@ -36,11 +36,11 @@ class DataActivity : AppCompatActivity() {
 
 
         confirm_btn_dataNext.setOnClickListener{
-            var gender = "NONE"
-            if(male.isChecked){
-                gender = male.text.toString()
+            var gender: Comparable<String>
+            gender = if(male.isChecked){
+                male.text.toString()
             } else if(female.isChecked){
-                gender = female.text.toString()
+                female.text.toString()
             } else {return@setOnClickListener}
 
             //val gender = data_form_gender.text.toString().trim{it<=' '}

@@ -40,11 +40,16 @@ class ResultActivity : AppCompatActivity() {
     var textview_date: TextView? = null
     var cal = Calendar.getInstance()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
+        //
+        val position = intent.getStringExtra("latitude")
+        Toast.makeText(this@ResultActivity, ""+ position,Toast.LENGTH_SHORT).show()
 
+        val test: TextView = findViewById(R.id.txt) as TextView
+        test.text = position
+        //////////////////////////////////////////
         val user = mAuth!!.currentUser
 //        result_text_duration.text = user!!.duration
 //        result_text_target.text = user.target_weight
@@ -142,6 +147,16 @@ class ResultActivity : AppCompatActivity() {
 //        result_btn_home.setOnClickListener{
 //            startActivity(Intent(this@ResultActivity, MainActivity::class.java))
 //        }
+
+        //CHECK if anonymous
+        if(user.isAnonymous){
+            finish()
+            startActivity(Intent(this@ResultActivity, MainActivity::class.java))
+        }
+
+        test_location.setOnClickListener{
+            startActivity(Intent(this@ResultActivity, LocationActivity::class.java))
+        }
 
         result_btn_logout.setOnClickListener{
             mAuth!!.signOut()

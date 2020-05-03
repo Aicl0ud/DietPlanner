@@ -69,20 +69,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, AuthActivity::class.java))
         }
 
-        main_btn_regis.setOnClickListener{
-            mAuth!!.signInAnonymously()
-                .addOnCompleteListener(this){ task ->
-                if(task.isSuccessful){
-                    Log.d(TAG, "signInAnonymously:success")
-                    startActivity(Intent(this@MainActivity, RegisterActivity::class.java))
-                    finish()
-                } else {
-                    Toast.makeText(this@MainActivity, "Authentication failed.", Toast.LENGTH_SHORT).show()
-                    Log.w(TAG, "signInAnonymously:failure", task.exception)
-                }
+//        main_btn_skip.setOnClickListener{
+//            mAuth!!.signInAnonymously()
+//                .addOnCompleteListener(this){ task ->
+//                if(task.isSuccessful){
+//                    Log.d(TAG, "signInAnonymously:success")
+//                    startActivity(Intent(this@MainActivity, ResultActivity::class.java))
+//                    finish()
+//                } else {
+//                    Toast.makeText(this@MainActivity, "Authentication failed.", Toast.LENGTH_SHORT).show()
+//                    Log.w(TAG, "signInAnonymously:failure", task.exception)
+//                }
+//
+//            }
+//        }
 
-            }
-        }
+        main_btn_regis.setOnClickListener{startActivity(Intent(this@MainActivity, RegisterActivity::class.java))}
 
     }
 
